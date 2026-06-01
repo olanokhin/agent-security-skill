@@ -4,39 +4,81 @@
 
 # 🛡️ agent-security-skill
 
-**One file. 20 official OWASP AI risks + 13 applied gap checks for coding agents.**
+**Native Claude Code + Codex skills. 20 official OWASP AI risks + 13 applied gap checks for coding agents.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OWASP](https://img.shields.io/badge/OWASP-LLM%20%2B%20GenAI%20%2B%20ASI-red)](https://owasp.org)
-[![Works With](https://img.shields.io/badge/Works%20With-Claude%20Code%20%7C%20Cursor%20%7C%20Copilot%20%7C%20Windsurf-blue)](#installation)
+[![Works With](https://img.shields.io/badge/Works%20With-Claude%20Code%20%7C%20Codex%20%7C%20Cursor%20%7C%20Copilot%20%7C%20Windsurf-blue)](#installation)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/olanokhin/agent-security-skill/pulls)
 
 <br/>
 
 ```
-Drop AI_SECURITY.md into your project root.
-Your coding agent starts reviewing AI code against OWASP-aligned checks.
-Today. While you learn the list at your own pace.
+Install the native skill where supported.
+Use the instruction file everywhere else.
+Ask your coding agent: owasp my code
 ```
 
-[**⬇️ Get the Skill File**](./AI_SECURITY.md) · [**See the Full Checklist**](#the-checks) · [**Quick Install**](#installation)
+[**⬇️ Install**](#installation) · [**See a Demo**](#quick-demo) · [**See the Full Checklist**](#the-checks)
 
 </div>
 
 ---
 
-## The Problem
+## What Is This?
 
-OWASP now separates AI application security across LLM and agentic application risks. This skill adds applied checks for the RAG, MCP, and orchestration gaps that show up in real code.
+`agent-security-skill` is a portable OWASP-aligned security review skill for coding agents.
 
-Most engineers know **3**.
+It teaches Claude Code, Codex, Cursor, Copilot, and Windsurf to review AI system code against OWASP-aligned LLM, RAG, MCP, tool, and agentic security risks.
 
+Use it as:
+
+- A native skill for Claude Code and Codex.
+- An instruction file for Cursor, Copilot, Windsurf, and other coding agents.
+- A portable checklist for AI security review during code generation and PR review.
+
+---
+
+## Why This Exists
+
+Most teams are familiar with prompt injection. Far fewer routinely review RAG retrieval boundaries, MCP/tool trust, agent permissions, approval flows, agent memory, or rogue-agent controls.
+
+OWASP now separates AI application security across LLM and agentic application risks. This project uses the official OWASP LLM 2025 and Agentic 2026 lists as the foundation, then adds an author-maintained applied checklist for gaps that show up in real RAG, MCP, tool, and orchestration code.
+
+Traditional security checklists are passive. This project turns OWASP AI security guidance into active coding-agent behavior.
+
+---
+
+## Quick Demo
+
+After installing the skill, ask your agent:
+
+```text
+owasp examples/unsafe.py
 ```
-What you know:         ███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  3 / 33
-What this skill checks:█████████████████████████████████  33 / 33
+
+Expected findings include:
+
+```text
+🚨 LAYER 1 · LLM01 · HIGH
+🚨 LAYER 2 · PIPE01 · HIGH
+🚨 LAYER 3 · ASI09 · HIGH
+🚨 LAYER 3 · ASI10 · HIGH
 ```
 
-The gap between those two bars is where incidents happen.
+See the full example output in [examples/report.md](./examples/report.md).
+
+---
+
+## Evaluation
+
+An AI security benchmark for coding agents is in progress.
+
+This is early-stage work: the skill is usable today, and the benchmark is still being built.
+
+The goal is to test this skill against vulnerable LLM, RAG, MCP, tool, and agent snippets, then compare how different coding agents report `LLM`, `PIPE`, and `ASI` findings.
+
+Interesting test cases are welcome. If you have real-world AI security failure modes, tricky false positives, or minimal vulnerable snippets, open an issue or PR. Contributions from AppSec, AI security, and agent builders are welcome.
 
 ---
 
@@ -58,8 +100,7 @@ The gap between those two bars is where incidents happen.
 └─────────────────────────────────────────────────────────┘
 ```
 
-Most tutorials cover Layer 1, item 1.  
-This skill uses the official OWASP LLM 2025 and Agentic 2026 lists as the foundation, then adds an author-maintained applied checklist for gaps that show up in real RAG, MCP, and orchestration code.
+Most tutorials cover Layer 1, item 1. This skill keeps the full review model in the coding agent's context.
 
 ---
 
@@ -73,7 +114,7 @@ This repo ships:
 - `examples/unsafe.py` — intentionally vulnerable AI code.
 - `examples/report.md` — example output from `owasp my code`.
 
-Install it by making your coding agent load that file as persistent project instructions. After installation, use it in two ways:
+Install it by making your coding agent load the native skill or instruction file as persistent project context. After installation, use it in three ways:
 
 1. **Automatic guardrail** — when your agent writes or edits LLM, RAG, MCP, tool, or agent code, it should apply the relevant `LLM`, `PIPE`, and `ASI` checks.
 2. **Explicit review** — ask your agent: `owasp my code`
@@ -84,18 +125,6 @@ The file is guidance, not a runtime scanner. It works best when your agent is re
 These short prompts mean: review the current file, diff, or PR against `LLM01-LLM10`, `PIPE01-PIPE13`, and `ASI01-ASI10`, then report `CRITICAL` and `HIGH` findings first.
 
 > Report quality depends on the LLM model, agent runtime, available context, and files the agent can inspect. Treat findings as security review assistance, not a replacement for human AppSec review.
-
----
-
-## Try It
-
-After installing the skill, ask your agent:
-
-```text
-owasp examples/unsafe.py
-```
-
-It should produce findings similar to [examples/report.md](./examples/report.md).
 
 ---
 

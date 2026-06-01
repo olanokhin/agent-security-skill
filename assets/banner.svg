@@ -24,8 +24,8 @@
 
   <g transform="translate(373 82)">
     <text x="0" y="52" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="58" font-weight="800" letter-spacing="0">agent-security-skill</text>
-    <text x="2" y="101" fill="#BAE6FD" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="600" letter-spacing="0">OWASP-aligned AI security review for coding agents</text>
-    <text x="2" y="144" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="21" font-weight="500" letter-spacing="0">20 official OWASP risks + 13 applied RAG/MCP/agent checks</text>
+    <text x="2" y="101" fill="#BAE6FD" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="600" letter-spacing="0">Native Claude Code + Codex skills</text>
+    <text x="2" y="144" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="21" font-weight="500" letter-spacing="0">OWASP AI security review · 20 official risks + 13 applied checks</text>
 
     <g transform="translate(0 184)">
       <rect x="0" y="0" width="172" height="42" rx="21" fill="#0F766E"/>
@@ -37,24 +37,26 @@
     </g>
 
     <g transform="translate(0 247)">
-      <rect x="0" y="0" width="232" height="52" rx="10" fill="#020617" stroke="#334155"/>
-      <text x="18" y="33" fill="#5EEAD4" font-family="SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="0">owasp my code</text>
-      <rect x="252" y="0" width="178" height="52" rx="10" fill="#020617" stroke="#334155"/>
-      <text x="270" y="33" fill="#93C5FD" font-family="SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="0">owasp this PR</text>
+      <rect x="0" y="0" width="210" height="52" rx="10" fill="#020617" stroke="#334155"/>
+      <text x="18" y="33" fill="#5EEAD4" font-family="SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace" font-size="17" font-weight="700" letter-spacing="0">/agent-security</text>
+      <rect x="230" y="0" width="210" height="52" rx="10" fill="#020617" stroke="#334155"/>
+      <text x="248" y="33" fill="#93C5FD" font-family="SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace" font-size="17" font-weight="700" letter-spacing="0">$agent-security</text>
+      <rect x="460" y="0" width="212" height="52" rx="10" fill="#020617" stroke="#334155"/>
+      <text x="478" y="33" fill="#FDE68A" font-family="SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace" font-size="17" font-weight="700" letter-spacing="0">owasp my code</text>
     </g>
   </g>
 
   <g opacity="0.8">
-    <rect x="1016" y="86" width="142" height="34" rx="17" fill="#111827" stroke="#334155"/>
-    <circle cx="1036" cy="103" r="5" fill="#5EEAD4"/>
-    <text x="1050" y="109" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">33 checks</text>
+    <rect x="1030" y="86" width="128" height="34" rx="17" fill="#111827" stroke="#334155"/>
+    <circle cx="1050" cy="103" r="5" fill="#5EEAD4"/>
+    <text x="1064" y="109" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">Claude</text>
 
-    <rect x="942" y="132" width="216" height="34" rx="17" fill="#111827" stroke="#334155"/>
-    <circle cx="962" cy="149" r="5" fill="#38BDF8"/>
-    <text x="976" y="155" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">2 official lists</text>
+    <rect x="1030" y="132" width="128" height="34" rx="17" fill="#111827" stroke="#334155"/>
+    <circle cx="1050" cy="149" r="5" fill="#38BDF8"/>
+    <text x="1064" y="155" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">Codex</text>
 
-    <rect x="962" y="178" width="196" height="34" rx="17" fill="#111827" stroke="#334155"/>
-    <circle cx="982" cy="195" r="5" fill="#FB7185"/>
-    <text x="996" y="201" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">1 applied layer</text>
+    <rect x="1030" y="178" width="128" height="34" rx="17" fill="#111827" stroke="#334155"/>
+    <circle cx="1050" cy="195" r="5" fill="#FB7185"/>
+    <text x="1064" y="201" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">33 checks</text>
   </g>
 </svg>
