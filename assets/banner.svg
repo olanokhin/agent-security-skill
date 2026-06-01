@@ -1,0 +1,60 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="420" fill="#0B1020"/>
+  <rect x="52" y="46" width="1176" height="328" rx="28" fill="#111827" stroke="#263147" stroke-width="2"/>
+  <path d="M0 344C168 284 276 315 422 259C579 199 669 112 829 148C994 185 1083 285 1280 230V420H0V344Z" fill="#12303A" opacity="0.65"/>
+  <path d="M0 91C179 143 286 98 430 131C602 170 674 261 849 237C1004 216 1094 122 1280 159V0H0V91Z" fill="#172554" opacity="0.7"/>
+
+  <g opacity="0.45">
+    <path d="M205 106H330" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M205 142H290" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+    <path d="M950 278H1075" stroke="#14B8A6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M990 314H1075" stroke="#14B8A6" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="184" cy="106" r="6" fill="#38BDF8"/>
+    <circle cx="184" cy="142" r="6" fill="#38BDF8"/>
+    <circle cx="1096" cy="278" r="6" fill="#14B8A6"/>
+    <circle cx="1096" cy="314" r="6" fill="#14B8A6"/>
+  </g>
+
+  <g transform="translate(102 92)">
+    <rect x="0" y="0" width="216" height="216" rx="32" fill="#0F172A" stroke="#334155" stroke-width="2"/>
+    <path d="M108 40L170 66V106C170 149 143 181 108 194C73 181 46 149 46 106V66L108 40Z" fill="#1E293B" stroke="#67E8F9" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M78 110L101 133L142 88" stroke="#5EEAD4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M58 214H158" stroke="#334155" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(373 82)">
+    <text x="0" y="52" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="58" font-weight="800" letter-spacing="0">agent-security-skill</text>
+    <text x="2" y="101" fill="#BAE6FD" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="600" letter-spacing="0">OWASP-aligned AI security review for coding agents</text>
+    <text x="2" y="144" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="21" font-weight="500" letter-spacing="0">20 official OWASP risks + 13 applied RAG/MCP/agent checks</text>
+
+    <g transform="translate(0 184)">
+      <rect x="0" y="0" width="172" height="42" rx="21" fill="#0F766E"/>
+      <text x="22" y="27" fill="#ECFEFF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17" font-weight="700" letter-spacing="0">LLM01-10</text>
+      <rect x="190" y="0" width="182" height="42" rx="21" fill="#1D4ED8"/>
+      <text x="212" y="27" fill="#EFF6FF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17" font-weight="700" letter-spacing="0">PIPE01-13</text>
+      <rect x="392" y="0" width="170" height="42" rx="21" fill="#BE123C"/>
+      <text x="414" y="27" fill="#FFF1F2" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17" font-weight="700" letter-spacing="0">ASI01-10</text>
+    </g>
+
+    <g transform="translate(0 247)">
+      <rect x="0" y="0" width="232" height="52" rx="10" fill="#020617" stroke="#334155"/>
+      <text x="18" y="33" fill="#5EEAD4" font-family="SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="0">owasp my code</text>
+      <rect x="252" y="0" width="178" height="52" rx="10" fill="#020617" stroke="#334155"/>
+      <text x="270" y="33" fill="#93C5FD" font-family="SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace" font-size="18" font-weight="700" letter-spacing="0">owasp this PR</text>
+    </g>
+  </g>
+
+  <g opacity="0.8">
+    <rect x="1016" y="86" width="142" height="34" rx="17" fill="#111827" stroke="#334155"/>
+    <circle cx="1036" cy="103" r="5" fill="#5EEAD4"/>
+    <text x="1050" y="109" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">33 checks</text>
+
+    <rect x="942" y="132" width="216" height="34" rx="17" fill="#111827" stroke="#334155"/>
+    <circle cx="962" cy="149" r="5" fill="#38BDF8"/>
+    <text x="976" y="155" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">2 official lists</text>
+
+    <rect x="962" y="178" width="196" height="34" rx="17" fill="#111827" stroke="#334155"/>
+    <circle cx="982" cy="195" r="5" fill="#FB7185"/>
+    <text x="996" y="201" fill="#CBD5E1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="0">1 applied layer</text>
+  </g>
+</svg>
