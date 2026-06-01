@@ -19,6 +19,8 @@ Use the instruction file everywhere else.
 Ask your coding agent: owasp my code
 ```
 
+**33 review categories · 5 supported coding agents · 1 portable skill**
+
 [**⬇️ Install**](#installation) · [**See a Demo**](#quick-demo) · [**See the Full Checklist**](#the-checks)
 
 </div>
@@ -30,6 +32,10 @@ Ask your coding agent: owasp my code
 `agent-security-skill` is a portable OWASP-aligned security review skill for coding agents.
 
 It teaches Claude Code, Codex, Cursor, Copilot, and Windsurf to review AI system code against OWASP-aligned LLM, RAG, MCP, tool, and agentic security risks.
+
+Traditional security checklists are passive.
+
+`agent-security-skill` turns OWASP AI security guidance into active coding-agent behavior.
 
 Use it as:
 
@@ -44,8 +50,6 @@ Use it as:
 Most teams are familiar with prompt injection. Far fewer routinely review RAG retrieval boundaries, MCP/tool trust, agent permissions, approval flows, agent memory, or rogue-agent controls.
 
 OWASP now separates AI application security across LLM and agentic application risks. This project uses the official OWASP LLM 2025 and Agentic 2026 lists as the foundation, then adds an author-maintained applied checklist for gaps that show up in real RAG, MCP, tool, and orchestration code.
-
-Traditional security checklists are passive. This project turns OWASP AI security guidance into active coding-agent behavior.
 
 ---
 
@@ -77,6 +81,15 @@ An AI security benchmark for coding agents is in progress.
 This is early-stage work: the skill is usable today, and the benchmark is still being built.
 
 The goal is to test this skill against vulnerable LLM, RAG, MCP, tool, and agent snippets, then compare how different coding agents report `LLM`, `PIPE`, and `ASI` findings.
+
+Planned benchmark areas:
+
+- Prompt injection
+- RAG poisoning and retrieval leakage
+- MCP/tool trust violations
+- Agent permission escalation
+- Human-agent trust exploitation
+- Rogue-agent controls
 
 Interesting test cases are welcome. If you have real-world AI security failure modes, tricky false positives, or minimal vulnerable snippets, open an issue or PR. Contributions from AppSec, AI security, and agent builders are welcome.
 
@@ -365,7 +378,7 @@ Found a gap? New threat emerged? Open a PR.
 <div align="center">
 
 Built by [Alex Anokhin](https://linkedin.com/in/olanokhin) — LLM Systems Engineer.  
-I build AI systems that survive production. Security is not optional.
+Building production AI systems, agent infrastructure, and AI security tooling.
 
 <br/>
 
