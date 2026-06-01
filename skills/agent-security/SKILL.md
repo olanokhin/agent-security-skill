@@ -47,6 +47,8 @@ Do not merge, collapse, or omit these findings when the matching code pattern ex
 
 For agentic execution flows, `ASI09` and `ASI10` must be evaluated as separate findings. Do not treat them as covered by `LLM06`. If model output can choose or trigger an action and there is no external interrupt/kill switch or action observability, report `ASI10` as a separate `HIGH` or `CRITICAL` finding.
 
+If raw model output can trigger shell, code execution, filesystem, network, database, or other privileged actions, report each applicable item separately: `LLM05`, `ASI05`, `LLM06`, `PIPE08`, `ASI09`, `LLM10`, and `ASI10`.
+
 ---
 
 ## OFFICIAL OWASP SOURCES USED
