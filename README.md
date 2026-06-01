@@ -135,13 +135,7 @@ cat AI_SECURITY.md >> /your-project/.cursor/rules/ai-security.mdc
 ```
 For older Cursor setups, copying the file to `.cursorrules` can still work, but `.cursor/rules/*.mdc` is the cleaner project-rules layout.
 
-### GitHub Copilot
-```bash
-mkdir -p /your-project/.github
-cp AI_SECURITY.md /your-project/.github/copilot-instructions.md
-```
-
-### VS Code Copilot
+### GitHub Copilot / VS Code
 ```bash
 mkdir -p /your-project/.github
 cp AI_SECURITY.md /your-project/.github/copilot-instructions.md
