@@ -43,9 +43,9 @@ Do not merge, collapse, or omit these findings when the matching code pattern ex
 | Raw LLM output reaches shell, code execution, SQL, filesystem write, network call, HTML render, or another privileged sink | `LLM05`, `ASI05` | `CRITICAL` |
 | Agent/tool execution can take irreversible or privileged actions without a verified external approval signal | `LLM06`, `PIPE08`, `ASI09` | `HIGH` |
 | LLM or agent calls are missing hard token, timeout, iteration, request, or cost limits | `LLM10` | `HIGH` |
-| Long-running or autonomous agent flow lacks kill switch, external interrupt, current-goal visibility, step visibility, cost visibility, or checkpointing | `ASI10` | `HIGH` |
+| Model-directed tool/action execution lacks kill switch, external interrupt, current-goal visibility, step visibility, cost visibility, or checkpointing | `ASI10` | `HIGH` |
 
-For agentic execution flows, `ASI09` and `ASI10` must be evaluated as separate findings. Do not treat them as covered by `LLM06`.
+For agentic execution flows, `ASI09` and `ASI10` must be evaluated as separate findings. Do not treat them as covered by `LLM06`. If model output can choose or trigger an action and there is no external interrupt/kill switch or action observability, report `ASI10` as a separate `HIGH` or `CRITICAL` finding.
 
 ---
 
@@ -287,6 +287,7 @@ Informed by: OWASP Secure Coding with AI Cheat Sheet, LLM Top 10 2025
 
 **ASI10 · Rogue Agents** ⚠️ CRITICAL
 - Flag any agent design with no kill switch / external interrupt mechanism
+- Flag any model-directed tool/action execution path with no external interrupt and no action observability
 - Warn if agent state is fully opaque — observability is a security requirement
 - Every long-running agent must expose: current goal, current step, accumulated cost, last checkpoint
 
