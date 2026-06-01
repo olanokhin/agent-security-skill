@@ -69,6 +69,7 @@ This repo ships:
 
 - `AI_SECURITY.md` — the full security instruction file.
 - `AGENTS.md` — a small universal entrypoint that imports the skill.
+- `skills/agent-security/SKILL.md` — portable skill format for runtimes that support skill folders.
 - `examples/unsafe.py` — intentionally vulnerable AI code.
 - `examples/report.md` — example output from `owasp my code`.
 
@@ -152,6 +153,13 @@ curl -fsSL -O https://raw.githubusercontent.com/olanokhin/agent-security-skill/m
 curl -fsSL -O https://raw.githubusercontent.com/olanokhin/agent-security-skill/main/AGENTS.md
 ```
 Use this when your agent supports `AGENTS.md` as a shared instruction file.
+
+### Portable skill format
+```bash
+mkdir -p skills
+curl -fsSL https://codeload.github.com/olanokhin/agent-security-skill/tar.gz/main | tar -xzf - -C skills --strip-components=2 agent-security-skill-main/skills/agent-security
+```
+Use this when your agent runtime supports a `skills/<name>/SKILL.md` layout.
 
 ### Verify Installation
 Ask your agent:

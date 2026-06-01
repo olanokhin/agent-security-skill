@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Security"
+  short_description: "OWASP-aligned AI code security reviews"
+  default_prompt: "Use $agent-security to review this AI code for OWASP-aligned LLM, RAG, MCP, and agentic security issues."
