@@ -271,15 +271,17 @@ ASI10  Rogue Agents              →  can you kill it? if no — don't ship it
 
 ---
 
-## Coverage
+## Why the Applied Layer Exists
 
-```
-OWASP LLM Top 10 2025              ██████████  10 / 10
-Applied gap checklist              █████████████  13 / 13
-OWASP Agentic Applications 2026    ██████████  10 / 10
-──────────────────────────────────────────
-Total                             33 checks
-```
+The two official OWASP lists define the risk categories. The `PIPE` checks turn those categories into things a coding agent can catch in real implementation work.
+
+| Code range | Purpose |
+|------------|---------|
+| `LLM01-LLM10` | Official OWASP LLM application risks |
+| `ASI01-ASI10` | Official OWASP agentic application risks |
+| `PIPE01-PIPE13` | Project-maintained checks for RAG, MCP, approvals, logs, evals, and orchestration code |
+
+The `PIPE` layer does not claim to be a third OWASP Top 10. It is a practical bridge from OWASP categories to code-review findings.
 
 ---
 
