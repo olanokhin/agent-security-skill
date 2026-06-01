@@ -118,38 +118,38 @@ It should produce findings similar to [examples/report.md](./examples/report.md)
 
 ## Installation
 
-Keep `AI_SECURITY.md` in your project root, then wire it into the instruction file your agent actually reads.
+Run the commands from your project root.
 
 ### Claude Code
 ```bash
-cp AI_SECURITY.md /your-project/AI_SECURITY.md
-printf '\n# AI Security\n@AI_SECURITY.md\n' >> /your-project/CLAUDE.md
+curl -fsSL -O https://raw.githubusercontent.com/olanokhin/agent-security-skill/main/AI_SECURITY.md
+printf '\n# AI Security\n@AI_SECURITY.md\n' >> CLAUDE.md
 ```
 Claude Code reads `CLAUDE.md`; the `@AI_SECURITY.md` import keeps the security checklist in a separate file.
 
 ### Cursor
 ```bash
-mkdir -p /your-project/.cursor/rules
-printf '%s\n' '---' 'description: AI security checks for LLM, RAG, MCP, and agent code' 'alwaysApply: true' '---' '' > /your-project/.cursor/rules/ai-security.mdc
-cat AI_SECURITY.md >> /your-project/.cursor/rules/ai-security.mdc
+mkdir -p .cursor/rules
+curl -fsSL -o .cursor/rules/ai-security.mdc https://raw.githubusercontent.com/olanokhin/agent-security-skill/main/AI_SECURITY.md
 ```
 For older Cursor setups, copying the file to `.cursorrules` can still work, but `.cursor/rules/*.mdc` is the cleaner project-rules layout.
 
 ### GitHub Copilot / VS Code
 ```bash
-mkdir -p /your-project/.github
-cp AI_SECURITY.md /your-project/.github/copilot-instructions.md
+mkdir -p .github/instructions
+curl -fsSL -o .github/instructions/ai-security.instructions.md https://raw.githubusercontent.com/olanokhin/agent-security-skill/main/AI_SECURITY.md
 ```
 
 ### Windsurf
 ```bash
-cp AI_SECURITY.md /your-project/.windsurfrules
+curl -fsSL -o AI_SECURITY.md https://raw.githubusercontent.com/olanokhin/agent-security-skill/main/AI_SECURITY.md
+printf '\n# AI Security\n@AI_SECURITY.md\n' >> .windsurfrules
 ```
 
 ### Universal fallback
 ```bash
-cp AI_SECURITY.md /your-project/AI_SECURITY.md
-cp AGENTS.md /your-project/AGENTS.md
+curl -fsSL -O https://raw.githubusercontent.com/olanokhin/agent-security-skill/main/AI_SECURITY.md
+curl -fsSL -O https://raw.githubusercontent.com/olanokhin/agent-security-skill/main/AGENTS.md
 ```
 Use this when your agent supports `AGENTS.md` as a shared instruction file.
 
