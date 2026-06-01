@@ -27,6 +27,21 @@ When the user says `owasp my code`, treat it as:
 
 > Review the current file, diff, branch, or PR against `LLM01-LLM10`, `PIPE01-PIPE13`, and `ASI01-ASI10`. Report `CRITICAL` and `HIGH` findings first, with file/line location, issue, and fix.
 
+### REQUIRED MINIMUM FINDINGS
+
+Do not merge, collapse, or omit these findings when the matching code pattern exists:
+
+| Pattern | Required findings | Minimum severity |
+|--------|-------------------|------------------|
+| Raw user input or external content is concatenated into prompts | `LLM01`, `PIPE01` | `HIGH` |
+| Secrets, API keys, PII, credentials, or internal URLs are placed in prompts | `LLM02` | `HIGH` |
+| Raw LLM output reaches shell, code execution, SQL, filesystem write, network call, HTML render, or another privileged sink | `LLM05`, `ASI05` | `CRITICAL` |
+| Agent/tool execution can take irreversible or privileged actions without a verified external approval signal | `LLM06`, `PIPE08`, `ASI09` | `HIGH` |
+| LLM or agent calls are missing hard token, timeout, iteration, request, or cost limits | `LLM10` | `HIGH` |
+| Long-running or autonomous agent flow lacks kill switch, external interrupt, current-goal visibility, step visibility, cost visibility, or checkpointing | `ASI10` | `HIGH` |
+
+For agentic execution flows, `ASI09` and `ASI10` must be evaluated as separate findings. Do not treat them as covered by `LLM06`.
+
 ---
 
 ## OFFICIAL OWASP SOURCES USED

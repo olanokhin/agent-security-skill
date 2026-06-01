@@ -133,6 +133,18 @@ Then ask Claude Code:
 
 Claude Code loads project skills from `.claude/skills/<skill-name>/SKILL.md`.
 
+### Codex app native skill
+```bash
+mkdir -p .agents/skills
+curl -fsSL https://codeload.github.com/olanokhin/agent-security-skill/tar.gz/main | tar -xzf - -C .agents/skills --strip-components=2 agent-security-skill-main/skills/agent-security
+```
+Then start a new Codex chat and ask:
+```text
+$agent-security owasp my code
+```
+
+Codex app loads project skills from `.agents/skills/<skill-name>/SKILL.md`.
+
 ### Claude Code instruction-file fallback
 ```bash
 curl -fsSL -O https://raw.githubusercontent.com/olanokhin/agent-security-skill/main/AI_SECURITY.md
@@ -171,7 +183,7 @@ Use this when your agent supports `AGENTS.md` as a shared instruction file.
 mkdir -p skills
 curl -fsSL https://codeload.github.com/olanokhin/agent-security-skill/tar.gz/main | tar -xzf - -C skills --strip-components=2 agent-security-skill-main/skills/agent-security
 ```
-Use this when your agent runtime supports a generic `skills/<name>/SKILL.md` layout. For Claude Code, use `.claude/skills` instead.
+Use this when your agent runtime supports a generic `skills/<name>/SKILL.md` layout. For Claude Code, use `.claude/skills`; for Codex app, use `.agents/skills`.
 
 ### Verify Installation
 Ask your agent:
