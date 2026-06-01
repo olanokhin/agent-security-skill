@@ -277,11 +277,13 @@ Informed by: OWASP Secure Coding with AI Cheat Sheet, LLM Top 10 2025
 When you find a violation, report it like this:
 
 ```
-🚨 [LAYER] · [CODE] · [SEVERITY]
+🚨 LAYER 1 · LLM01 · HIGH
 Location: file.py:42
 Issue: <one sentence>
 Fix: <one sentence>
 ```
+
+Use `LAYER 1` for `LLM` findings, `LAYER 2` for `PIPE` findings, and `LAYER 3` for `ASI` findings.
 
 Severity levels: `CRITICAL` · `HIGH` · `MEDIUM` · `LOW`
 
